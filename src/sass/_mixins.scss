@@ -1,0 +1,33 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin around {
+    @include flex;
+    justify-content: space-around;
+}
+@mixin center {
+    @include flex;
+    justify-content: center;
+}
+@mixin btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@mixin centerX {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin centerY {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin centerXY {
+    @include centerX;
+    @include centerY;
+    transform: translate3d(-50%,-50%,0);
+}
